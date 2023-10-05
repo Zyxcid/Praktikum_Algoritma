@@ -1,2 +1,2 @@
 # Praktikum_Algoritma
-dibimbing oleh pak randi proska
+Dibimbing oleh pak Randi Proska
