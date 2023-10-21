@@ -1,0 +1,3 @@
+Yang dimaksud dengan Algoritma adalah langkah-langkah untuk menyelesaikan masalah.
+pemrograman adalah tahap penyusunan langkah untuk menyelesaikan suatu masalah, program adalah tahap tersebut, dan programmer adalah orang yang membuat program tersebut.
+IDE adalah ekosistem atau lingkungan untuk mengetik dan menjalankan kode
