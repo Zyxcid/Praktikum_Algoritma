@@ -14,10 +14,10 @@ int main () {
 	
 	switch (pilihan){
 		case 1:
-			printf("Rumus luas permukaan bola: Lp: 4 x phi x r².");
+			printf("Rumus luas permukaan bola: Lp: 4 x phi x rÂ².");
 			break;
 		case 2:
-			printf("Rumus kubus: L = 2 × (pl + pt + lt) atau 6 x s²");
+			printf("Rumus kubus: L = 2 Ã— (pl + pt + lt) atau 6 x sÂ²");
 			break;
 		case 3:
 			printf("Rumus balok: 2 x (panjang x lebar + panjang x tinggi + lebar x tinggi");
