@@ -9,5 +9,5 @@ Pointer digunakan secara ekstensif di C dan C++ untuk tiga tujuan utama:
 Untuk mendeklarasikan pointer digunakan sintaks sebagai berikut:
 *nama_pointer = &suatu_variabel
 
-![ilustrasipointer](./Screenshot_pointer.png)
+![ilustrasipointer](./Screenshot_pointer.png)  
 pointer akan menggunakan alamat memori yang sama dengan variabel tersebut
