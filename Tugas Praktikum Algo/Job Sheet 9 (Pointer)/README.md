@@ -10,6 +10,6 @@ Untuk mendeklarasikan pointer digunakan sintaks sebagai berikut:
 *nama_pointer = &suatu_variabel
 
 ![ilustrasipointer](./Screenshot_pointer.png)  
-pointer akan menggunakan alamat memori yang sama dengan variabel tersebut
+pointer akan menggunakan alamat memori yang sama dengan variabel tersebut.
 
-Untuk lebih memahami pointer saya sarankan mengunjungi website berikut [->](https://learn.microsoft.com/id-id/cpp/cpp/pointers-cpp?view=msvc-170)
+Untuk lebih memahami pointer saya sarankan mengunjungi website berikut [learn.microsoft.com](https://learn.microsoft.com/id-id/cpp/cpp/pointers-cpp?view=msvc-170)
