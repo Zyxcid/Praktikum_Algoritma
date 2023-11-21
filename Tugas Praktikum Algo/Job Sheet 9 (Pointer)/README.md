@@ -1,4 +1,4 @@
- # [Pointer](https://learn.microsoft.com/id-id/cpp/cpp/pointers-cpp?view=msvc-170)
+ # Pointer
 Pointer adalah variabel yang menyimpan **alamat memori objek**
 
 Pointer digunakan secara ekstensif di C dan C++ untuk tiga tujuan utama: 
@@ -11,3 +11,5 @@ Untuk mendeklarasikan pointer digunakan sintaks sebagai berikut:
 
 ![ilustrasipointer](./Screenshot_pointer.png)  
 pointer akan menggunakan alamat memori yang sama dengan variabel tersebut
+
+Untuk lebih memahami pointer saya sarankan mengunjungi website berikut [->](https://learn.microsoft.com/id-id/cpp/cpp/pointers-cpp?view=msvc-170)
