@@ -7,4 +7,7 @@ Pointer digunakan secara ekstensif di C dan C++ untuk tiga tujuan utama:
 * Untuk melakukan iterasi atas elemen dalam array atau struktur data lainnya.
 
 Untuk mendeklarasikan pointer digunakan sintaks sebagai berikut:
-*nama_pointer = &variabel_yang_ingin_dituju_alamatnya
+*nama_pointer = &suatu_variabel
+
+pointer akan menggunakan alamat memori yang sama dengan variabel tersebut
+![gambarpointer](https://ibb.co/8bPqYRb)
