@@ -1,4 +1,7 @@
  # Pointer
+
+![meme](https://images.app.goo.gl/RrJskguX9KjMQ3mp9)
+
 Pointer adalah variabel yang menyimpan **alamat memori objek**
 
 Pointer digunakan secara ekstensif di C dan C++ untuk tiga tujuan utama: 
