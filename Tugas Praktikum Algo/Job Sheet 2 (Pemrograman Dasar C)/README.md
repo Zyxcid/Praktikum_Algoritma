@@ -1,7 +1,7 @@
 # Pemrograman Dasar C
 ### C Basic Syntax
-berikut beberapa sintaks dasar bahasa c [/www.tutorialspoint.com](https://www.tutorialspoint.com/cprogramming/c_basic_syntax.htm)
-![struktur bahasa c](https://media.geeksforgeeks.org/wp-content/uploads/20221219163357/Structure-of-C-Program.png)  
+berikut beberapa sintaks dasar bahasa c [/www.tutorialspoint.com]([https://www.tutorialspoint.com/cprogramming/c_basic_syntax.htm)
+![struktur bahasa c](https://media.geeksforgeeks.org/wp-content/uploads/20221219163357/Structure-of-C-Program.png](https://uploads-ssl.webflow.com/5f3c19f18169b62a0d0bf387/60d33bee5f6050f9e045f727_OBQcuBgn1l8MdRiR_dyVjLK1-pnfgOkpiL18k8ORvN1SfhzEuZA-mFaUwK8s92Hi6o1Ys2bg4TQorO9aNyJR9gfS4HGkPpgJ_VB4YNimjB5P5NWVrmzEDWUqpvEnH-rtkl7avEjf.png)) 
 Sintaks dasar program C terdiri dari header, fungsi main(), deklarasi variabel, body, dan tipe return dari program.
 
 * Header adalah baris pertama dalam program C dengan ekstensi .h yang berisi definisi makro dan fungsi-fungsi C. 
