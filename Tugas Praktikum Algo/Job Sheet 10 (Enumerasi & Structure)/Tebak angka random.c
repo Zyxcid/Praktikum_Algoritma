@@ -10,7 +10,7 @@ int main(){
     int x = rand()%20;
     printf("%d\n", x);
     
-    LOOP:do {
+    do {
 
     	while (tebakan != x){
     		printf("masukkan tebakan anda: ");
@@ -33,11 +33,8 @@ int main(){
     	
 	    printf("Apakah anda ingin bermain lagi? (y/n) ");
 	    scanf("%c", &lanjut);
-	    if (lanjut = 'y'){
-	    	goto LOOP;
-		}
 	
-	} while (lanjut != 'n');
+	} while (lanjut = 'y');
 	
     return 0;
 }
