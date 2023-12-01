@@ -1,6 +1,7 @@
 # Algoritma, Pemrograman & IDE
 
 ## Algoritma
+![algorithm](./Images/algorithms_everywhere.jpg)
 #### Definisi Algoritma  
 Algoritma adalah **urutan langkah-langkah** yang disusun secara sistematis dan 
 logis untuk menyelesaikan suatu masalah atau mencapai suatu tujuan tertentu.
