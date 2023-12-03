@@ -1,3 +1,5 @@
+![Job Sheet 1](Images/JS1.png)
+
 # Algoritma, Pemrograman & IDE
 
 ## Algoritma
