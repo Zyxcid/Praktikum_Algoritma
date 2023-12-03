@@ -1,5 +1,5 @@
 # Praktikum_Algoritma
-Berikut daftar job sheet di semester 1, mata kuliah praktikum algoritma pemrograman, dengan pak Randi Proska sebagai dosen pengampu
+Berikut daftar job sheet di semester 1, mata kuliah praktikum algoritma pemrograman, dengan pak Randi Proska sebagai dosen pengampu  
 [Job Sheet 1 (Algoritma, Pemrograman & IDE)](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%201%20(Algoritma%2C%20Pemrograman%20%26%20IDE))  
 [Job Sheet 2 (Pemrograman Dasar C)](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%202%20(Pemrograman%20Dasar%20C))  
 [Job Sheet 3 (Variabel, Konstanta & Tipe Data)](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%203%20(Variabel%2C%20Konstanta%20%26%20Tipe%20Data))  
