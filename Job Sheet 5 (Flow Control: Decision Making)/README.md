@@ -15,7 +15,7 @@ Kita dapat menempatkan pernyataan if di dalam pernyataan if yang lain.
 ![Flowchart Nested If-else](https://media.geeksforgeeks.org/wp-content/uploads/20230424102041/nested-if-else-flowchart.webp)
 
 ## [Switch Case](https://www.geeksforgeeks.org/c-switch-statement/)
-Pernyataan switch case adalah alternatif dari tangga if else if yang dapat digunakan untuk mengeksekusi kode kondisional berdasarkan nilai variabel yang ditentukan dalam pernyataan switch. Blok switch terdiri dari kasus-kasus yang akan dieksekusi berdasarkan nilai variabel switch.
+Pernyataan switch case adalah alternatif dari tangga if else if yang dapat digunakan untuk mengeksekusi kode kondisional berdasarkan nilai variabel yang ditentukan dalam pernyataan switch. Blok switch terdiri dari kasus-kasus yang akan dieksekusi berdasarkan nilai variabel switch.  
 ![Flowchart Switch Case](https://media.geeksforgeeks.org/wp-content/uploads/20231115161034/flow-diagram-of-switch-in-c.png)
 
 ## [Conditional Operator](https://www.geeksforgeeks.org/conditional-or-ternary-operator-in-c/)
