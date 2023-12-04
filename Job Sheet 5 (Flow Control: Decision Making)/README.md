@@ -10,11 +10,11 @@ If di C adalah pernyataan pengambilan keputusan yang digunakan untuk mengeksekus
 Pernyataan if hanya memberitahu kita bahwa jika suatu kondisi benar maka blok pernyataan akan dieksekusi, dan jika kondisinya salah maka tidak akan dieksekusi. Namun bagaimana jika kita ingin melakukan hal lain ketika kondisinya salah? Inilah pernyataan C else. Kita dapat menggunakan pernyataan else dengan pernyataan if untuk mengeksekusi blok kode ketika kondisinya salah.  
 ![If-else](https://media.geeksforgeeks.org/wp-content/uploads/20230220123250/flowchart_of_if_else_in_c.png)  
 
-## Nested If-else (Percabangan Bersarang)
+## [Nested If-else (Percabangan Bersarang)](https://www.geeksforgeeks.org/cpp-nested-if-else-statement/)
 Kita dapat menempatkan pernyataan if di dalam pernyataan if yang lain.
 ![Flowchart Nested If-else](https://media.geeksforgeeks.org/wp-content/uploads/20230424102041/nested-if-else-flowchart.webp)
 
-## Switch Case
+## [Switch Case](https://www.geeksforgeeks.org/c-switch-statement/)
 Pernyataan switch case adalah alternatif dari tangga if else if yang dapat digunakan untuk mengeksekusi kode kondisional berdasarkan nilai variabel yang ditentukan dalam pernyataan switch. Blok switch terdiri dari kasus-kasus yang akan dieksekusi berdasarkan nilai variabel switch.
 ![Flowchart Switch Case](https://media.geeksforgeeks.org/wp-content/uploads/20231115161034/flow-diagram-of-switch-in-c.png)
 
