@@ -9,6 +9,17 @@ Pointer digunakan secara ekstensif di C dan C++ untuk tiga tujuan utama:
 * Untuk meneruskan fungsi ke fungsi lain;
 * Untuk melakukan iterasi atas elemen dalam array atau struktur data lainnya.
 
+### Sintaks Pointer C
+Sintaks pointer mirip dengan deklarasi variabel di C, tetapi kami menggunakan operator dereferensi ( * ) dalam deklarasi pointer.  
+
+>tipe data *  ptr ;
+
+Di mana  
+- **ptr** adalah nama penunjuknya.  
+- **tipe data** adalah tipe data yang ditunjuknya.
+
+Sintaks di atas digunakan untuk mendefinisikan pointer ke suatu variabel. Kita juga dapat mendefinisikan pointer ke fungsi, struktur, dll.
+
 ### Bagaimana Cara Menggunakan Pointer?
 Penggunaan pointer di C dapat dibagi menjadi tiga langkah:
 
