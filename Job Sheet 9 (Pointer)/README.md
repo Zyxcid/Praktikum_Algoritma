@@ -1,23 +1,25 @@
- # Pointer
+![Job Sheet 9](https://github.com/Zyxcid/Praktikum_Algoritma/blob/main/Images/JS9.png)
 
-![meme](https://images.app.goo.gl/RrJskguX9KjMQ3mp9)
+[Pointer](https://www.geeksforgeeks.org/c-pointers/) didefinisikan sebagai tipe data turunan yang dapat menyimpan alamat variabel C lain atau **lokasi memori**. Kita dapat mengakses dan memanipulasi data yang disimpan di lokasi memori tersebut menggunakan pointer.  
 
-Pointer adalah variabel yang menyimpan **alamat memori objek**
+![Cara pointer bekerja](https://www.geeksforgeeks.org/wp-content/uploads/How-Pointer-Works-In-C.png)
 
 Pointer digunakan secara ekstensif di C dan C++ untuk tiga tujuan utama: 
 * Untuk mengalokasikan objek baru pada timbunan;
 * Untuk meneruskan fungsi ke fungsi lain;
 * Untuk melakukan iterasi atas elemen dalam array atau struktur data lainnya.
 
-Untuk mendeklarasikan pointer digunakan sintaks sebagai berikut:
-*nama_pointer = &suatu_variabel
+### Bagaimana Cara Menggunakan Pointer?
+Penggunaan pointer di C dapat dibagi menjadi tiga langkah:
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./Screenshot_pointer.png">
-  <source media="(prefers-color-scheme: light)" srcset="./Screenshot_pointer2.png">
-  <img alt="Screenshot ilustrasi pointer" src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">  
-</picture>  
-  
-pointer akan menggunakan alamat memori yang sama dengan variabel tersebut.
-  
-Untuk lebih memahami pointer saya sarankan mengunjungi website berikut [learn.microsoft.com](https://learn.microsoft.com/id-id/cpp/cpp/pointers-cpp?view=msvc-170)
+- Deklarasi Pointer
+   Dalam deklarasi pointer, kita hanya mendeklarasikan pointer tetapi tidak menginisialisasinya. Untuk mendeklarasikan sebuah pointer, kita menggunakan operator dereferensi ( * ) sebelum namanya.  
+Contoh:
+> int * ptr ;  
+
+- Inisialisasi Pointer
+   Inisialisasi pointer adalah proses dimana kita memberikan beberapa nilai awal ke variabel pointer. Kami biasanya menggunakan operator alamat ( & ) untuk mendapatkan alamat memori suatu variabel dan kemudian menyimpannya dalam variabel penunjuk.  
+Contoh:
+>int var = 10;  
+>int * ptr ;  
+>ptr = & var;   
