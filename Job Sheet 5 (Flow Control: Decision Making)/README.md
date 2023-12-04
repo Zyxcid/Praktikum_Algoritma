@@ -1,9 +1,9 @@
 ![Job Sheet 5](https://github.com/Zyxcid/Praktikum_Algoritma/blob/main/Images/JS5.png)
-## [Decision Making dalam Bahasa C](https://www.geeksforgeeks.org/decision-making-c-cpp/)
+## [Decision Making dalam Bahasa C](https://www.geeksforgeeks.org/decision-making-c-cpp/)  
 ![decision making](https://media.geeksforgeeks.org/wp-content/uploads/20230424101456/Conditional-Statements-in-c.webp)
 
 ### [If](https://www.geeksforgeeks.org/c-if-statement/)
-If di C adalah pernyataan pengambilan keputusan yang digunakan untuk mengeksekusi blok kode berdasarkan nilai ekspresi yang diberikan. Ini adalah salah satu konsep inti pemrograman C dan digunakan untuk memasukkan kode kondisional dalam program kita.
+If di C adalah pernyataan pengambilan keputusan yang digunakan untuk mengeksekusi blok kode berdasarkan nilai ekspresi yang diberikan. Ini adalah salah satu konsep inti pemrograman C dan digunakan untuk memasukkan kode kondisional dalam program kita.  
 ![If](https://media.geeksforgeeks.org/wp-content/uploads/20230310131453/flowchart-of-if-in-c.png)
 
 ## [If-else](https://www.geeksforgeeks.org/c-if-else-statement/)
@@ -11,7 +11,7 @@ Pernyataan if hanya memberitahu kita bahwa jika suatu kondisi benar maka blok pe
 ![If-else](https://media.geeksforgeeks.org/wp-content/uploads/20230220123250/flowchart_of_if_else_in_c.png)  
 
 ## [Nested If-else (Percabangan Bersarang)](https://www.geeksforgeeks.org/cpp-nested-if-else-statement/)
-Kita dapat menempatkan pernyataan if di dalam pernyataan if yang lain.
+Kita dapat menempatkan pernyataan if di dalam pernyataan if yang lain.  
 ![Flowchart Nested If-else](https://media.geeksforgeeks.org/wp-content/uploads/20230424102041/nested-if-else-flowchart.webp)
 
 ## [Switch Case](https://www.geeksforgeeks.org/c-switch-statement/)
