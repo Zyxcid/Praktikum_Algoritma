@@ -101,10 +101,11 @@ int damage_senjata(struct senjata *Senjata) {
     } else if (strcmp(Player.equip, "Tongkat") == 0) {
         base_damage = Senjata->damage_tongkat;
         if (Player.MP > 0) {
+            printf("\tMenggunakan %d mana\n", Senjata->mp_tongkat);
             Player.MP -= Senjata->mp_tongkat;
         } else {
             printf("Mana tidak cukup!!\n");
-            return 0; // Return 0 damage if not enough mana
+            return 0;
         }
     } else {
         base_damage = 2; // Base damage for the default case (Tinju)
@@ -155,12 +156,12 @@ void bertualang(struct penyimpanan *Player, struct senjata *sen, struct musuh *e
 
                     printf("\tAnda menyerang %s dengan %s dan menyebabkan %d damage!\n", enemy->nama, Player->equip, damage_player);
                     enemy->HP -= damage_player;
-                    printf("\tHP Anda: %d | HP %s: %d\n\n", Player->HP, enemy->nama, enemy->HP);
+                    printf("\tHP Anda: %d MP Anda: %d | HP %s: %d\n\n", Player->HP, Player->MP, enemy->nama, enemy->HP);
 
                     if (enemy->HP > 0) {
                         printf("\t%s menyerang Anda dan menyebabkan %d damage!\n", enemy->nama, damage_enemy);
                         Player->HP -= damage_enemy;
-                        printf("\tHP Anda: %d | HP %s: %d\n", Player->HP, enemy->nama, enemy->HP);
+                        printf("\tHP Anda: %d MP Anda: %d | HP %s: %d\n", Player->HP, Player->MP, enemy->nama, enemy->HP);
 
                         if (Player->HP <= 0) {
                             printf("\n\n\t!! Anda kalah dalam pertarungan !!\n");
