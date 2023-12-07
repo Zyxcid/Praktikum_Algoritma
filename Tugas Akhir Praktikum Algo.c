@@ -19,6 +19,7 @@ struct penyimpanan {
     int emas;
     char inventory[INVENTORY_SIZE][39];
     int darah;
+    char equip[39];
 } Player = {100, {}, 100};
 
 // Struct harga barang yang tersedia
@@ -82,14 +83,13 @@ void tambah_ke_inventory(struct penyimpanan *Player, const char *item_name) {
     }
 }
 
-//  Nyerang musuh biar gk ngegacha terus:)
+// Serang musuh
 void serang_musuh(struct penyimpanan *Player, struct senjata *sen, struct musuh *enemy) {
     bool in_battle = true;
 
-	printf("\n\tMenemukan %s! darah: %d\n", enemy->nama, enemy->darah);
+    printf("\n\tMenemukan %s! darah: %d\n", enemy->nama, enemy->darah);
 
     while (in_battle) {
-    	
         printf("\n-- Battle Menu --\n");
         printf("1. Attack\n");
         printf("2. Use Item\n");
@@ -101,40 +101,27 @@ void serang_musuh(struct penyimpanan *Player, struct senjata *sen, struct musuh 
         fflush(stdin);
 
         switch (battle_choice) {
-            case 1: {
-                printf("Pilih senjata untuk menyerang musuh:\n");
-                for (int i = 0; i < INVENTORY_SIZE; ++i) {
-                    if (strlen(Player->inventory[i]) > 0) {
-                        printf("%d. %s\n", i + 1, Player->inventory[i]);
-                    }
-                }
-
-                int weapon_choice;
-                printf("-> ");
-                scanf("%d", &weapon_choice);
-                fflush(stdin);
-
-                if (weapon_choice >= 1 && weapon_choice <= INVENTORY_SIZE && strlen(Player->inventory[weapon_choice - 1]) > 0) {
-                    const char *selected_weapon = Player->inventory[weapon_choice - 1];
+            case 1:
+                {
                     int damage = 0;
-
-                    if (strcmp(selected_weapon, "Pedang") == 0) {
+                    if (strcmp(Player->equip, "Pedang") == 0) {
                         damage = sen->pedang;
                     } 
-					else if (strcmp(selected_weapon, "Busur") == 0) {
+                    else if (strcmp(Player->equip, "Busur") == 0) {
                         damage = sen->busur;
                     } 
-					else if (strcmp(selected_weapon, "Tombak") == 0) {
+                    else if (strcmp(Player->equip, "Tombak") == 0) {
                         damage = sen->tombak;
                     } 
-					else if (strcmp(selected_weapon, "Tongkat") == 0) {
+                    else if (strcmp(Player->equip, "Tongkat") == 0) {
                         damage = sen->tongkat;
                     }
-					else {
-	                    printf("Pilihan item tidak valid!\n");
-	                }
+                    else {
+                        printf("Pilihan item tidak valid!\n");
+                        continue;
+                    }
 
-                    printf("\tAnda menyerang %s dengan %s dan menyebabkan %d damage!\n", enemy->nama, selected_weapon, damage);
+                    printf("\tAnda menyerang %s dengan %s dan menyebabkan %d damage!\n", enemy->nama, Player->equip, damage);
                     enemy->darah -= damage;
                     printf("\tdarah Anda: %d | darah %s: %d\n\n", Player->darah, enemy->nama, enemy->darah);
 
@@ -149,74 +136,82 @@ void serang_musuh(struct penyimpanan *Player, struct senjata *sen, struct musuh 
                             printf("\n\n\n\tThanks for playing!\n");
                             exit(0);
                         }
-                    } else {
+                    } 
+                    else {
                         printf("\tAnda berhasil mengalahkan %s!\n", enemy->nama);
                         printf("\t+%d emas\n", enemy->hadiah);
                         Player->emas += enemy->hadiah; // hadiah emas ditambahkan ke emas player
                         in_battle = false; // Keluar dari loop pertempuran
                     }
-                } else {
-                    printf("Pilihan senjata tidak valid!\n");
-                }
-                break;
-            }
-            case 2: {
-                printf("Pilih item untuk digunakan:\n");
-                for (int i = 0; i < INVENTORY_SIZE; ++i) {
-                    if (strlen(Player->inventory[i]) > 0) {
-                        printf("%d. %s\n", i + 1, Player->inventory[i]);
-                    }
-                }
-
-                int item_choice;
-                printf("-> ");
-                scanf("%d", &item_choice);
-                fflush(stdin);
-                int Pakai_hp_potion = 0;
-
-                if (item_choice >= 1 && item_choice <= INVENTORY_SIZE && strlen(Player->inventory[item_choice - 1]) > 0) {
-                    if (strcmp(Player->inventory[item_choice - 1], "HP Potion") == 0) {
-                        // Handle HP Potion
-                        if (DARAH_MAX == Player->darah) {
-                        	printf("Darahmu sudah penuh!\n");
-						}
-                        else if (DARAH_MAX - Player->darah < 20) {
-                        	Pakai_hp_potion = DARAH_MAX - Player->darah;
-                        	Player->darah += Pakai_hp_potion;
-	                        printf("Anda menggunakan HP Potion dan mendapatkan %d HP!\n", Pakai_hp_potion);
-						}
-						else {
-							Player->darah += 20;
-	                        printf("Anda menggunakan HP Potion dan mendapatkan 20 HP!\n");
-						}
-
-                        printf("darah Anda: %d | darah %s: %d\n", Player->darah, enemy->nama, enemy->darah);
-                    }
-					else if (strcmp(Player->inventory[item_choice - 1], "MP Potion") == 0) {
-                        // Handle MP Potion
-                        printf("Anda tidak bisa menggunakan MP Potion saat menyerang!\n");
-                    }
-                    else {
-                    	printf("Item tidak bisa digunakan!\n");
-					}
                 } 
-				else {
-                    printf("Pilihan item tidak valid!\n");
-                }
                 break;
-            }
+
+            case 2:
+                {
+                    printf("Pilih item untuk digunakan:\n");
+                    for (int i = 0; i < INVENTORY_SIZE; ++i) {
+                        if (strlen(Player->inventory[i]) > 0) {
+                            printf("%d. %s\n", i + 1, Player->inventory[i]);
+                        }
+                    }
+
+                    int item_choice;
+                    printf("-> ");
+                    scanf("%d", &item_choice);
+                    fflush(stdin);
+
+                    int Pakai_hp_potion = 0;
+
+                    if (item_choice >= 1 && item_choice <= INVENTORY_SIZE && strlen(Player->inventory[item_choice - 1]) > 0) {
+                        if (strcmp(Player->inventory[item_choice - 1], "HP Potion") == 0) {
+                            // Handle HP Potion
+                            if (DARAH_MAX == Player->darah) {
+                                printf("Darahmu sudah penuh!\n");
+                            }
+                            else if (DARAH_MAX - Player->darah < 20) {
+                                Pakai_hp_potion = DARAH_MAX - Player->darah;
+                                Player->darah += Pakai_hp_potion;
+                                printf("Anda menggunakan HP Potion dan mendapatkan %d HP!\n", Pakai_hp_potion);
+                            }
+                            else {
+                                Player->darah += 20;
+                                printf("Anda menggunakan HP Potion dan mendapatkan 20 HP!\n");
+                            }
+
+                            printf("darah Anda: %d | darah %s: %d\n", Player->darah, enemy->nama, enemy->darah);
+                        }
+                        else if (strcmp(Player->inventory[item_choice - 1], "MP Potion") == 0) {
+                            // Handle MP Potion
+                            printf("Anda tidak bisa menggunakan MP Potion saat menyerang!\n");
+                        }
+                        else {
+                            printf("Item tidak bisa digunakan!\n");
+                        }
+                    } 
+                    else {
+                        printf("Pilihan item tidak valid!\n");
+                    }
+                } 
+                break;
+
             case 3:
                 printf("Anda melarikan diri dari pertarungan!\n");
                 in_battle = false; // Exit the battle loop
                 break;
+
             default:
                 printf("Masukkan input yang valid\n");
         }
     }
 }
 
-
 void pilih_senjata(struct penyimpanan *Player, struct senjata *sen) {
+
+	if (strlen(Player->equip) != 0) {
+		printf("Anda sudah mempunyai %s!\n", Player->equip);
+		return;
+	}
+
     printf("Senjata apa yang ingin Anda beli?\n");
     printf("1. Pedang\tharga: %d emas\n", sen->pedang);
     printf("2. Busur\tharga: %d emas\n", sen->busur);
@@ -233,7 +228,7 @@ void pilih_senjata(struct penyimpanan *Player, struct senjata *sen) {
         case 1:
             if (Player->emas >= sen->pedang) {
                 Player->emas -= sen->pedang;
-                tambah_ke_inventory(Player, "Pedang");
+                strcpy(Player->equip, "Pedang");
                 printf("Kamu telah membeli sebuah PEDANG\n");
             } else {
                 printf("Emas tidak cukup!\n");
@@ -242,7 +237,7 @@ void pilih_senjata(struct penyimpanan *Player, struct senjata *sen) {
         case 2:
             if (Player->emas >= sen->busur) {
                 Player->emas -= sen->busur;
-                tambah_ke_inventory(Player, "Busur");
+                strcpy(Player->equip, "Busur");
                 printf("Kamu telah membeli sebuah BUSUR\n");
             } else {
                 printf("Emas tidak cukup!\n");
@@ -251,7 +246,7 @@ void pilih_senjata(struct penyimpanan *Player, struct senjata *sen) {
         case 3:
             if (Player->emas >= sen->tombak) {
                 Player->emas -= sen->tombak;
-                tambah_ke_inventory(Player, "Tombak");
+                strcpy(Player->equip, "Tombak");
                 printf("Kamu telah membeli sebuah TOMBAK\n");
             } else {
                 printf("Emas tidak cukup!\n");
@@ -260,7 +255,7 @@ void pilih_senjata(struct penyimpanan *Player, struct senjata *sen) {
         case 4:
             if (Player->emas >= sen->tongkat) {
                 Player->emas -= sen->tongkat;
-                tambah_ke_inventory(Player, "Tongkat");
+                strcpy(Player->equip, "Tongkat");
                 printf("Kamu telah membeli sebuah TONGKAT\n");
             } else {
                 printf("Emas tidak cukup!\n");
@@ -385,6 +380,7 @@ void gacha(struct penyimpanan *Player) {
 }
 
 void tampilkan_inventory(struct penyimpanan *Player) {
+	printf("Senjatamu %s\n", Player->equip);
     printf("Inventory:\n");
     printf("darah: %d\n", Player->darah);
     printf("%d emas\n", Player->emas);
