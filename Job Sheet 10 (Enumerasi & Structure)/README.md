@@ -12,4 +12,4 @@ Kita dapat mengakses anggota struktur menggunakan [operator titik ( . )](https:/
 Sintaksis
 struktur_nama.anggota1;
 strcuture_name.member2;
-Jika kita memiliki penunjuk ke struktur, kita juga dapat menggunakan operator panah untuk mengakses anggota.
+Jika kita memiliki penunjuk ke struktur, kita juga dapat menggunakan [operator panah](https://www-geeksforgeeks-org.translate.goog/arrow-operator-in-c-c-with-examples/) untuk mengakses anggota.
