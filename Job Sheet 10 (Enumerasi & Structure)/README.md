@@ -1,8 +1,8 @@
 ![Job Sheet 10](https://github.com/Zyxcid/Praktikum_Algoritma/blob/main/Images/JS10.png))
 
 ## [Enumerasi](https://www.geeksforgeeks.org/enumeration-enum-c/)
-![Enum dalam C](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Enum-In-C.png)
-Enum atau Enumeration merupakan tipe data yang berisi sekumpulan konstanta. Enum termasuk dalam tipe data bentukan, karena tipe data ini dibuat sendiri oleh kita.
+![Enum dalam C](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Enum-In-C.png)  
+Enum atau Enumeration merupakan tipe data yang berisi sekumpulan konstanta. Enum termasuk dalam tipe data bentukan, karena tipe data ini dibuat sendiri oleh kita.  
 
  ## [Structure](www.geeksforgeeks.org/structures-c/)
  ![Struct dalam C](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Structure-In-C.png)  
