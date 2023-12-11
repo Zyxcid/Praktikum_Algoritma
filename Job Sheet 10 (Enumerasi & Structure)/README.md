@@ -5,10 +5,10 @@
 Enum atau Enumeration merupakan tipe data yang berisi sekumpulan konstanta. Enum termasuk dalam tipe data bentukan, karena tipe data ini dibuat sendiri oleh kita.
 
  ## [Structure](www.geeksforgeeks.org/structures-c/)
- ![Struct dalam C](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Structure-In-C.png)
-Structure atau struct adalah kumpulan dari beberapa variabel dengan beragam tipe data yang dibungkus dalam satu varabel
-### Akses Anggota Struktur
-Kita dapat mengakses anggota struktur menggunakan [operator titik ( . )](https://www.geeksforgeeks.org/dot-operator-in-c/).
+ ![Struct dalam C](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Structure-In-C.png)  
+Structure atau struct adalah kumpulan dari beberapa variabel dengan beragam tipe data yang dibungkus dalam satu varabel  
+### Akses Anggota Struktur  
+Kita dapat mengakses anggota struktur menggunakan [operator titik ( . )](https://www.geeksforgeeks.org/dot-operator-in-c/)  
 Sintaksis  
 struktur_nama.anggota1;  
 strcuture_name.member2;  
