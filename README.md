@@ -10,4 +10,4 @@ Berikut daftar job sheet di **semester 1**, mata kuliah **praktikum algoritma pe
 [Job Sheet 8 (Fungsi & Prosedur)](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%208%20(Fungsi%20%26%20Prosedur))  
 [Job Sheet 9 (Pointer)](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%209%20(Pointer))  
 [Job Sheet 10 (Enumerasi & Structure)](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%2010%20(Enumerasi%20%26%20Structure))  
-[Job Sheet 11]  
+[Job Sheet 11](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%20%2011%20(File%20Handing%20in%20C))
