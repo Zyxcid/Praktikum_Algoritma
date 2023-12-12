@@ -1,4 +1,4 @@
-// Created by Sha
+// Created by Syahid Nurhidayatullah (23343056)
 // Mencari rata-rata dari nilai dari 20 mahasiswa
 
 #include <stdio.h>

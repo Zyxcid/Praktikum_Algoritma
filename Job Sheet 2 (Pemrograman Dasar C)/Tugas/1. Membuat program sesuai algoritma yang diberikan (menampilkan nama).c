@@ -1,4 +1,4 @@
-// Created by Sha
+// Created by Syahid Nurhidayatullah (23343056)
 // Membuat program sesuai algoritma yang diberikan
 
 #include <stdio.h>

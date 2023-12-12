@@ -1,4 +1,4 @@
-// Created by Sha
+// Created by Syahid Nurhidayatullah (23343056)
 // Perkalian dua buah bilangan bulat positif dilakukan dengan metode penjumlahan sebagai berikut: 12 x 6 = 12 + 12 + 12 + 12 +12 +12 
 
 #include <stdio.h>

@@ -1,4 +1,4 @@
-// Created by Sha
+// Created by Syahid Nurhidayatullah (23343056)
 // Program halaman login yang meminta pengguna untuk menginput username dan password
 
 #include <stdio.h>

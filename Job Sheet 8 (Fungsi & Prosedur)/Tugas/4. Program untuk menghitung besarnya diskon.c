@@ -1,3 +1,4 @@
+// Created by Syahid Nurhidayatullah (23343056)
 // Program untuk menghitung besarnya diskon
 /*
 a. Jika belanja dibawah 1 jt, maka tidak mendapatkan diskon

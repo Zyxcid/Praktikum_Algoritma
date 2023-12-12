@@ -1,10 +1,9 @@
 // Created by Syahid Nurhidayatullah (23343056)
 
 //  Ide saat ini adalah untuk membuat toserba game RPG
-//  Hmm, kalau uangnya habis gimana? kutambahlah sistem GACHA!
-//  Eh, kalau kalah gacha gimana? gacha kan perlu uang juga...
-//  Yodahlah tambah musuh untuk dilawan:)
-//  Kok jadi game turn based RPG wkwk
+//  Hmm, kalau uangnya habis? GACHA!
+//  Masih kurang, tambah sistem battle
+//  Jadilah game turn based RPG
 
 #include <stdio.h>
 #include <string.h>

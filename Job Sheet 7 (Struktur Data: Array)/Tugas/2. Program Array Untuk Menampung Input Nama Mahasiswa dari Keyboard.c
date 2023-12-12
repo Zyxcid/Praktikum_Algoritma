@@ -1,4 +1,4 @@
-// Created by Sha
+// Created by Syahid Nurhidayatullah (23343056)
 // Program Array Untuk Menampung Input Nama Mahasiswa dari Keyboard.
 
 #include <stdio.h>

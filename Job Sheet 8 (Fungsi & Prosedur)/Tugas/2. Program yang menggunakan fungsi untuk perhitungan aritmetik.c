@@ -1,3 +1,4 @@
+// Created by Syahid Nurhidayatullah (23343056)
 // Program yang menggunakan fungsi untuk perhitungan aritmetik yaitu penjumlahan, pengurangan, perkalian dan pembagian
 
 #include <stdio.h>

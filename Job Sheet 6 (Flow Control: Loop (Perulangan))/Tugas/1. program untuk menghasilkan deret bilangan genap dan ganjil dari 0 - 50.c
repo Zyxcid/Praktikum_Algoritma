@@ -1,4 +1,4 @@
-// Created by Sha
+// Created by Syahid Nurhidayatullah (23343056)
 // Program untuk menghasilkan deret bilangan genap dan ganjil dari 0 - 50
 
 #include <stdio.h>
