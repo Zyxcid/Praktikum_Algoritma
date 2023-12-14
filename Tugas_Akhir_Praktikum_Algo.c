@@ -53,8 +53,6 @@ struct musuh {
 void init_enemy(struct musuh *musuh) {
     int musuh_random = rand() % 1000 + 1;  // Angka random 1 - 1000
 
-    printf("Angka random: %d\n", musuh_random);
-
     //  Memasukkan data musuh dari sini ke dalam struct musuh tadi
     if (musuh_random >= 1 && musuh_random <= 200) {
         strcpy(musuh->nama, "Goblin");
