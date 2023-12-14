@@ -36,7 +36,7 @@ struct senjata {
     int mp_tongkat;
 } Senjata = {20, 10, 20, 10, 40, 15, 50, 22, 2};
 
-struct item { // Ada item HP potion sama MP potion di game ini
+struct item { // Ada item HP-potion sama MP-potion di game ini
     int harga_hp_potion;
     int harga_mp_potion;
 } Item = {3, 2};
@@ -226,37 +226,37 @@ void bertualang(struct penyimpanan *Player, struct senjata *sen, struct musuh *m
                     int Pakai_mp_potion = 0;
 
                     if (item_choice >= 1 && item_choice <= INVENTORY_SIZE && strlen(Player->persediaan[item_choice - 1]) > 0) {
-                        if (strcmp(Player->persediaan[item_choice - 1], "HP Potion") == 0) {
-                            // Menghandle HP Potion
+                        if (strcmp(Player->persediaan[item_choice - 1], "HP-Potion") == 0) {
+                            // Menghandle HP-Potion
                             if (HP_MAX == Player->HP) {
-                                printf("Kamu menggunakan HP potion walapun HPmu sudah penuh!\n");
+                                printf("Kamu menggunakan HP-potion walapun HPmu sudah penuh!\n");
                             }
                             else if (HP_MAX - Player->HP < 20) {
                                 Pakai_hp_potion = HP_MAX - Player->HP;
                                 Player->HP += Pakai_hp_potion;
-                                printf("Kamu menggunakan HP Potion dan mendapatkan %d HP!\n", Pakai_hp_potion);
+                                printf("Kamu menggunakan HP-Potion dan mendapatkan %d HP!\n", Pakai_hp_potion);
                             }
                             else {
                                 Player->HP += 20;
-                                printf("Kamu menggunakan HP Potion dan mendapatkan 20 HP!\n");
+                                printf("Kamu menggunakan HP-Potion dan mendapatkan 20 HP!\n");
                             }
 
                             printf("HPmu: %d\n", Player->HP);
                             strcpy(Player->persediaan[item_choice - 1], ""); // Menghapus item dari persediaan setelah dipakai
                         }
-                        else if (strcmp(Player->persediaan[item_choice - 1], "MP Potion") == 0) {
-                            // Menghandle MP Potion
+                        else if (strcmp(Player->persediaan[item_choice - 1], "MP-Potion") == 0) {
+                            // Menghandle MP-Potion
                             if (MP_MAX == Player->MP) {
                                 printf("MPmu sudah penuh!\n");
                             }
                             else if (MP_MAX - Player->MP < 5) {
                                 Pakai_mp_potion = MP_MAX - Player->MP;
                                 Player->MP += Pakai_mp_potion;
-                                printf("Kamu menggunakan MP Potion dan mendapatkan %d MP!\n", Pakai_mp_potion);
+                                printf("Kamu menggunakan MP-Potion dan mendapatkan %d MP!\n", Pakai_mp_potion);
                             }
                             else {
                                 Player->MP += 5;
-                                printf("Kamu menggunakan MP Potion dan mendapatkan 20 MP!\n");
+                                printf("Kamu menggunakan MP-Potion dan mendapatkan 20 MP!\n");
                             }
 
                             printf("MP Kamu: %d\n", Player->MP);
@@ -377,8 +377,8 @@ void beli_senjata(struct penyimpanan *Player, struct senjata *sen) {
 
 void beli_item(struct penyimpanan *Player, struct item *Item) {
     printf("Item apa yang ingin Kamu beli?\n");
-    printf("1. HP Potion\tharga: %d emas\n", Item->harga_hp_potion);
-    printf("2. MP Potion\tharga: %d emas\n", Item->harga_mp_potion);
+    printf("1. HP-Potion\tharga: %d emas\n", Item->harga_hp_potion);
+    printf("2. MP-Potion\tharga: %d emas\n", Item->harga_mp_potion);
     printf("9. Kembali\n");
 
     int pilihan_item;
@@ -390,8 +390,8 @@ void beli_item(struct penyimpanan *Player, struct item *Item) {
         case 1:
             if (Player->emas >= Item->harga_hp_potion) {
                 Player->emas -= Item->harga_hp_potion;
-                tambah_ke_persediaan(Player, "HP Potion");
-                printf("Kamu telah membeli HP Potion\n");
+                tambah_ke_persediaan(Player, "HP-Potion");
+                printf("Kamu telah membeli HP-Potion\n");
             } 
             else {
                 printf("Emas tidak cukup!\n");
@@ -400,8 +400,8 @@ void beli_item(struct penyimpanan *Player, struct item *Item) {
         case 2:
             if (Player->emas >= Item->harga_mp_potion) {
                 Player->emas -= Item->harga_mp_potion;
-                tambah_ke_persediaan(Player, "MP Potion");
-                printf("Kamu telah membeli MP Potion\n");
+                tambah_ke_persediaan(Player, "MP-Potion");
+                printf("Kamu telah membeli MP-Potion\n");
             } 
             else {
                 printf("Emas tidak cukup!\n");
@@ -443,7 +443,7 @@ void gacha(struct penyimpanan *Player) {
             if (angka_random >= 1 && angka_random <= 500) {
                 printf("Bad luck! -10 emas.\n");
                 Player->emas -= 10;
-            } else if (angka_random >= 401 && angka_random <= 800) {
+            } else if (angka_random >= 501 && angka_random <= 900) {
                 printf("+20 emas!\n");
                 Player->emas += 20;
             } else {
@@ -463,7 +463,7 @@ void gacha(struct penyimpanan *Player) {
                 printf("Bad luck! -40 emas.\n");
                 Player->emas -= 40;
             } 
-            else if (angka_random >= 401 && angka_random <= 800) {
+            else if (angka_random >= 501 && angka_random <= 900) {
                 printf("+40 emas!\n");
                 Player->emas += 50;
             } 
@@ -517,6 +517,46 @@ void tampilkan_persediaan(struct penyimpanan *Player) {
     }
 }
 
+//  Menyimpan data struct player sebagai bentuk progress dalam game
+void simpan_progress(struct penyimpanan *Player) {
+    FILE *file = fopen("progress.txt", "w");
+    if (file == NULL) {
+        printf("Gagal membuat file progres.\n");
+        return;
+    }
+
+    fprintf(file, "%d\n", Player->emas);
+    fprintf(file, "%d\n%d\n", Player->HP, Player->MP);
+    fprintf(file, "%s\n", Player->equip);
+    for (int i = 0; i < INVENTORY_SIZE; i++) {
+        fprintf(file, "%s\n", Player->persediaan[i]);
+    }
+
+    printf("Berhasil menyimpan progress\n");
+    
+    fclose(file);
+}
+
+void muat_progress(struct penyimpanan *Player) {
+    FILE *file = fopen("progress.txt", "r");
+    if (file == NULL) {
+        printf("Gagal membuka file progres.\n");
+        return;
+    }
+
+    fscanf(file, "%d\n", &Player->emas);
+    fscanf(file, "%d\n%d\n", &Player->HP, &Player->MP);
+    fscanf(file, "%s\n", Player->equip);
+    for (int i = 0; i < INVENTORY_SIZE; i++) {
+        fscanf(file, "%s\n", Player->persediaan[i]);
+    }
+
+    printf("Berhasil memuat progress\n");
+
+    fclose(file);
+}
+
+
 int main() {
     int pilihan_menu_utama, pilihan_toko;
 	
@@ -526,6 +566,8 @@ int main() {
         printf("2. Gacha\n");
         printf("3. Bertualang\n");
         printf("4. Inventaris\n");
+        printf("5. Simpan\n");
+        printf("6. Muat\n");
         printf("9. Keluar\n");
 
         printf("-> ");
@@ -564,6 +606,12 @@ int main() {
                 break;
             case 4:
                 tampilkan_persediaan(&Player);
+                break;
+            case 5:
+                simpan_progress(&Player);
+                break;
+            case 6:
+                muat_progress(&Player);
                 break;
             case 9:
                 return 0;
