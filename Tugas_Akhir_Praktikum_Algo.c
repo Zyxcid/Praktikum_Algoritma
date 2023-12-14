@@ -1,10 +1,5 @@
 // Created by Syahid Nurhidayatullah (23343056)
 
-//  Ide saat ini adalah untuk membuat toserba game RPG
-//  Hmm, kalau uangnya habis gimana? kutambahlah sistem GACHA!
-//  Eh, kalau kalah gacha gimana? battle!
-//  Jadilah game turn based RPG
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -52,51 +47,50 @@ struct musuh {
     int HP;
     int damage;
     int hadiah;
-} Enemy;
+} Musuh;
 
 //  Nambah musuh baru secara random
-void init_enemy(struct musuh *enemy) {
-    //  Generate a random number
+void init_enemy(struct musuh *musuh) {
     int musuh_random = rand() % 1000 + 1;  // Angka random 1 - 1000
 
     printf("Angka random: %d\n", musuh_random);
 
     //  Memasukkan data musuh dari sini ke dalam struct musuh tadi
     if (musuh_random >= 1 && musuh_random <= 200) {
-        strcpy(enemy->nama, "Goblin");
-	    enemy->HP = 60;
-	    enemy->damage = 10;
-	    enemy->hadiah = 10;
+        strcpy(musuh->nama, "Goblin");
+	    musuh->HP = 60;
+	    musuh->damage = 10;
+	    musuh->hadiah = 10;
     }
 	else if (musuh_random >= 201 && musuh_random <= 400) {
-	    strcpy(enemy->nama, "Slime");
-	    enemy->HP = 30;
-	    enemy->damage = 6;
-	    enemy->hadiah = 8;	    
+	    strcpy(musuh->nama, "Slime");
+	    musuh->HP = 30;
+	    musuh->damage = 6;
+	    musuh->hadiah = 8;	    
     }
 	else if (musuh_random >= 401 && musuh_random <= 600) {
-	    strcpy(enemy->nama, "Undead");
-	    enemy->HP = 55;
-	    enemy->damage = 10;
-	    enemy->hadiah = 10;	    
+	    strcpy(musuh->nama, "Undead");
+	    musuh->HP = 55;
+	    musuh->damage = 10;
+	    musuh->hadiah = 10;	    
     }
 	else if (musuh_random >= 601 && musuh_random <= 800) {
-	    strcpy(enemy->nama, "Skeleton");
-	    enemy->HP = 50;
-	    enemy->damage = 9;
-	    enemy->hadiah = 10;	    
+	    strcpy(musuh->nama, "Skeleton");
+	    musuh->HP = 50;
+	    musuh->damage = 9;
+	    musuh->hadiah = 10;	    
     }
 	else if (musuh_random >= 801 && musuh_random <= 950) {
-	    strcpy(enemy->nama, "Golem");
-	    enemy->HP = 125;
-	    enemy->damage = 18;
-	    enemy->hadiah = 30;
+	    strcpy(musuh->nama, "Golem");
+	    musuh->HP = 125;
+	    musuh->damage = 18;
+	    musuh->hadiah = 30;
     }
     else {
-	    strcpy(enemy->nama, "Mimic");
-	    enemy->HP = 50;
-	    enemy->damage = 15;
-	    enemy->hadiah = 50;	    
+	    strcpy(musuh->nama, "Mimic");
+	    musuh->HP = 50;
+	    musuh->damage = 15;
+	    musuh->hadiah = 50;	    
 	}
 }
 
@@ -147,8 +141,8 @@ int hitung_damage_senjata(struct senjata *Senjata) {
 
     return total_damage;
 }
-int hitung_damage_musuh(struct musuh *enemy) {
-    int damage_dasar = enemy->damage;
+int hitung_damage_musuh(struct musuh *musuh) {
+    int damage_dasar = musuh->damage;
     int angka_random = rand() % 4 - 1; // Angka random -1 sampai 2
 
     int total_damage = damage_dasar + angka_random;
@@ -161,9 +155,9 @@ int hitung_damage_musuh(struct musuh *enemy) {
 
 
 //  Nyerang musuh biar gak gacha terus:)
-void bertualang(struct penyimpanan *Player, struct senjata *sen, struct musuh *enemy) {
+void bertualang(struct penyimpanan *Player, struct senjata *sen, struct musuh *musuh) {
     bool dalam_pertempuran = true;
-    printf("\n\tMenemukan %s! HP: %d\n", enemy->nama, enemy->HP);
+    printf("\n\tMenemukan %s! HP: %d\n", musuh->nama, musuh->HP);
 
     while (dalam_pertempuran) {
         printf("\n-- Battle Menu --\n");
@@ -178,17 +172,17 @@ void bertualang(struct penyimpanan *Player, struct senjata *sen, struct musuh *e
         fflush(stdin);
 
         int damage_player = hitung_damage_senjata(sen);
-        int damage_musuh = hitung_damage_musuh(enemy);
+        int damage_musuh = hitung_damage_musuh(musuh);
         
         switch (battle_choice) {
             //  Serang
             case 1:
                 {
-                    printf("\tKamu menyerang %s dengan %s dan menyebabkan %d damage!\n", enemy->nama, Player->equip, damage_player);
-                    enemy->HP -= damage_player;
+                    printf("\tKamu menyerang %s dengan %s dan menyebabkan %d damage!\n", musuh->nama, Player->equip, damage_player);
+                    musuh->HP -= damage_player;
 
-                    if (enemy->HP > 0) {
-                        printf("\t%s menyerang Kamu dan menyebabkan %d damage!\n", enemy->nama, damage_musuh);
+                    if (musuh->HP > 0) {
+                        printf("\t%s menyerang Kamu dan menyebabkan %d damage!\n", musuh->nama, damage_musuh);
                         Player->HP -= damage_musuh;
  
                         if (Player->HP <= 0) {
@@ -199,9 +193,9 @@ void bertualang(struct penyimpanan *Player, struct senjata *sen, struct musuh *e
                         }
                     } 
                     else {
-                        printf("\tKamu berhasil mengalahkan %s!\n", enemy->nama);
-                        printf("\t+%d emas\n", enemy->hadiah);
-                        Player->emas += enemy->hadiah; // hadiah emas ditambahkan ke emas player
+                        printf("\tKamu berhasil mengalahkan %s!\n", musuh->nama);
+                        printf("\t+%d emas\n", musuh->hadiah);
+                        Player->emas += musuh->hadiah; // hadiah emas ditambahkan ke emas player
                         dalam_pertempuran = false;
                     }
                 } 
@@ -290,14 +284,14 @@ void bertualang(struct penyimpanan *Player, struct senjata *sen, struct musuh *e
                     dalam_pertempuran = false; // Keluar dari loop
                 }
                 else if (angka_random >= 41 && angka_random <= 50) {
-                    printf("\tEntah bagaimana ada petir menyambar %s!\n", enemy->nama);
-                    printf("\t+%d emas\n", enemy->hadiah + 2);
-                    Player->emas += enemy->hadiah + 2;
+                    printf("\tEntah bagaimana ada petir menyambar %s!\n", musuh->nama);
+                    printf("\t+%d emas\n", musuh->hadiah + 2);
+                    Player->emas += musuh->hadiah + 2;
                     dalam_pertempuran = false;
                 }
                 else {
                     printf("\tGagal melarikan diri!\n\n");
-                    printf("\t%s menyerangmu dan menyebabkan %d damage!\n", enemy->nama, damage_musuh);
+                    printf("\t%s menyerangmu dan menyebabkan %d damage!\n", musuh->nama, damage_musuh);
                     Player->HP -= damage_musuh;
 
                     if (Player->HP <= 0) {
@@ -567,8 +561,8 @@ int main() {
                 gacha(&Player);
                 break;
             case 3:
-            	init_enemy(&Enemy); // Menambahkan musuh baru
-                bertualang(&Player, &Senjata, &Enemy);
+            	init_enemy(&Musuh); // Menambahkan musuh baru
+                bertualang(&Player, &Senjata, &Musuh);
                 break;
             case 4:
                 tampilkan_persediaan(&Player);
