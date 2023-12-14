@@ -1,4 +1,4 @@
-![Job Sheet 10](https://github.com/Zyxcid/Praktikum_Algoritma/blob/main/Images/JS10.png))
+![Job Sheet 10](https://github.com/Zyxcid/Praktikum_Algoritma/blob/main/Images/JS10.png)
 
 ## [Enumerasi](https://www.geeksforgeeks.org/enumeration-enum-c/)
 ![Enum dalam C](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Enum-In-C.png)  
