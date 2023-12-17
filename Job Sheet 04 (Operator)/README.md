@@ -2,7 +2,7 @@
 ## [Operator Dalam Bahasa C](https://www.geeksforgeeks.org/operators-in-c/)  
 
 + Operator Aritmatika - Operator ini digunakan untuk melakukan operasi aritmatika/matematika pada operan. 
-  - Operator Unary : Operator yang mengoperasikan atau bekerja dengan satu operan adalah operator unary. Misalnya: Operator Kenaikan`++` dan Penurunan`-–`.
+  - Operator Unary : Operator yang mengoperasikan atau bekerja dengan satu operan adalah operator unary. Misalnya: Operator Kenaikan`++` dan Penurunan`--`.
   - Operator Biner : Operator yang mengoperasikan atau bekerja dengan dua operan adalah operator biner. Misalnya: operator penjumlahan`+`, pengurangan`-`, perkalian`*`, pembagian`/`.
 + Operator Relasional - Membandingkan nilai dua operan. Misalnya: `==`, `>=`, `<=`.
 + Operator Logika - Hasil pengoperasian operator logika adalah nilai Boolean benar atau salah. Misalnya, logika AND yang direpresentasikan sebagai operator `&&` di C.
