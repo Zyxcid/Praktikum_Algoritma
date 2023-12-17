@@ -4,7 +4,7 @@
   </a>
 </div>
 
-## Biodata Mahasiswa
+# Biodata Mahasiswa
 * Nama: Syahid Nurhidayatullah
 * NIM: 23343056  
 * Prodi: Informatika (NK)  
