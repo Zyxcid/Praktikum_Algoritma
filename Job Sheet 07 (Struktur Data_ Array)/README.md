@@ -15,12 +15,17 @@ tipe_data nama_array [ ukuran1 ] [ ukuran2 ]...[ ukuranN ];
 
 ### Inisialisasi Array  
 1. Inisialisasi Array dengan Deklarasi  
-   tipe_data nama_array [ ukuran ] = {nilai1, nilai2, ... nilaiN};  
+   ```
+   tipe_data nama_array [ ukuran ] = {nilai1, nilai2, ... nilaiN};
+   ```
    ![Inisialisasi array](https://media.geeksforgeeks.org/wp-content/uploads/20230302092653/C-array-initialization.png)
-2. Inisialisasi Array dengan Deklarasi tanpa Ukuran  
-   tipe_data nama_array[] = {1,2,3,4,5};  
-3. Inisialisasi Array setelah Deklarasi (Menggunakan Loop)  
-   untuk (int i = 0; i < N; i++) { nama_array [i] = nilai i ; }  
-
+3. Inisialisasi Array dengan Deklarasi tanpa Ukuran  
+   ```
+   tipe_data nama_array[] = {1,2,3,4,5};
+   ```
+4. Inisialisasi Array setelah Deklarasi (Menggunakan Loop)  
+   ```
+   for (int i = 0; i < N; i++) { nama_array [i] = nilai i ; }  
+   ```
 ### Akses Elemen Array  
 ![Akses](https://media.geeksforgeeks.org/wp-content/uploads/20230302092738/access-array-elements.png)
