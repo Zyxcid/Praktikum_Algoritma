@@ -21,5 +21,7 @@ Pernyataan switch case adalah alternatif dari tangga if else if yang dapat digun
 ## [Conditional Operator](https://www.geeksforgeeks.org/conditional-or-ternary-operator-in-c/)
 Operator kondisional digunakan untuk menambahkan kode kondisional dalam program kita. Pernyataan ini mirip dengan pernyataan if-else. Ia juga dikenal sebagai operator ternary karena bekerja pada tiga operan.
 ### Sintaks operator ternary
+```
 ( kondisi ) ?  [pernyataan_benar]  :  [pernyataan_flase] ;
+```
 ![flowchart ternary operator](https://media.geeksforgeeks.org/wp-content/uploads/20230302093903/flowchart-of-conditional-or-ternary-operator-in-c.png)
