@@ -8,7 +8,7 @@ Kita dapat menyimpan berbagai jenis data dalam variabel dan menggunakan kembali 
 ```
 tipe_data nama_variabel = nilai ; // mendefinisikan variabel tunggal   
  atau   
-tipe_data nama_variabel1, nama_variabel2;     // mendefinisikan banyak variabel  
+tipe_data nama_variabel1, nama_variabel2; // mendefinisikan banyak variabel  
 ```
 beberapa catatan untuk penamaan variabel:
 * Nama variabel hanya boleh berisi huruf, angka, dan garis bawah.
