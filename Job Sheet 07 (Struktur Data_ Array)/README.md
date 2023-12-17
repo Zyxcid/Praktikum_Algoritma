@@ -6,10 +6,11 @@ Array merupakan struktur data yang digunakan untuk menyimpan
 sekumpulan data dalam satu tempat, array ini juga disebut dengan istilah larik.   
 
 ### Sintaks Deklarasi Array
-> tipe_data nama_array [ukuran];   
->          atau   
-> tipe_data nama_array [ ukuran1 ] [ ukuran2 ]...[ ukuranN ];  
-
+```
+tipe_data nama_array [ukuran];   
+          atau   
+tipe_data nama_array [ ukuran1 ] [ ukuran2 ]...[ ukuranN ];  
+```
 ![Array declaration](https://media.geeksforgeeks.org/wp-content/uploads/20230302092603/c-array-declaration.png)  
 
 ### Inisialisasi Array  
