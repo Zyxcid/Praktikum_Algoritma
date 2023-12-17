@@ -11,9 +11,9 @@ Pointer digunakan secara ekstensif di C dan C++ untuk tiga tujuan utama:
 
 ### Sintaks Pointer C
 Sintaks pointer mirip dengan deklarasi variabel di C, tetapi kami menggunakan operator dereferensi ( * ) dalam deklarasi pointer.  
-
->tipe data *  ptr ;
-
+```
+tipe data *  ptr ;
+```
 Di mana  
 - **ptr** adalah nama penunjuknya.  
 - **tipe data** adalah tipe data yang ditunjuknya.
@@ -26,11 +26,15 @@ Penggunaan pointer di C dapat dibagi menjadi tiga langkah:
 - Deklarasi Pointer
    Dalam deklarasi pointer, kita hanya mendeklarasikan pointer tetapi tidak menginisialisasinya. Untuk mendeklarasikan sebuah pointer, kita menggunakan operator dereferensi ( * ) sebelum namanya.  
 Contoh:
-> int * ptr ;  
+```
+int * ptr ;  
+```
 
 - Inisialisasi Pointer
    Inisialisasi pointer adalah proses dimana kita memberikan beberapa nilai awal ke variabel pointer. Kami biasanya menggunakan operator alamat ( & ) untuk mendapatkan alamat memori suatu variabel dan kemudian menyimpannya dalam variabel penunjuk.  
 Contoh:
->int var = 10;  
->int * ptr ;  
->ptr = & var;   
+```
+int var = 10;  
+int * ptr ;  
+ptr = & var;   
+```
