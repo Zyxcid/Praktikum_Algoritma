@@ -5,10 +5,11 @@ Variabel dalam C adalah lokasi memori dengan beberapa nama yang membantu menyimp
 Kita dapat menyimpan berbagai jenis data dalam variabel dan menggunakan kembali variabel yang sama untuk menyimpan beberapa data lain berapa kali pun.  
   
 ### Pendeklarasian Variabel
+```
 tipe_data nama_variabel = nilai ; // mendefinisikan variabel tunggal   
  atau   
 tipe_data nama_variabel1, nama_variabel2;     // mendefinisikan banyak variabel  
-
+```
 beberapa catatan untuk penamaan variabel:
 * Nama variabel hanya boleh berisi huruf, angka, dan garis bawah.
 * Nama variabel harus diawali dengan alfabet atau garis bawah saja. Itu tidak bisa dimulai dengan angka.
@@ -25,9 +26,11 @@ Ruang lingkupnya adalah keseluruhan program yaitu kita dapat mengakses variabel 
 
 ## [konstanta](https://www.geeksforgeeks.org/constants-in-c/)
 Konstanta dalam C adalah variabel read-only yang nilainya tidak dapat diubah setelah didefinisikan.  
-Kita dapat mendeklarasikan variabel konstan menggunakan kata kunci const.  
+Kita dapat mendeklarasikan variabel konstan menggunakan kata kunci `const`.  
 ### Pendeklarasian Konstanta
+```
 const tipe_data nama_variabel = nilai;  
+```
 ![Pendeklarasian Konstanta dalam bahasa C](https://media.geeksforgeeks.org/wp-content/uploads/20230306220005/how-to-declare-constants-in-c.png)  
 
 ## [Tipe Data](https://www.geeksforgeeks.org/data-types-in-c/)  
