@@ -1,0 +1,12 @@
+Data Mahasiswa ke-1
+Nama: Dayat
+NIM: 2030302
+Jurusan: Sejarah
+Program Studi: Geografi_Lingkungan
+
+Data Mahasiswa ke-2
+Nama: Nur
+NIM: 2030303
+Jurusan: Sejarah
+Program Studi: Pembangunan_Wilayah
+
