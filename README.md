@@ -26,4 +26,4 @@
 - [**Job Sheet 10**](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%2010%20(Enumerasi%20%26%20Structure)) (Enumerasi & Structure)  
 - [**Job Sheet 11**](https://github.com/Zyxcid/Praktikum_Algoritma/tree/main/Job%20Sheet%2011%20(File%20Handing%20in%20C)) (File Handling in C)  
 
-` Penjelasan lebih rinci mengenai job sheet terdapat di dalam folder masing-masing job sheet! `  
+` Penjelasan lebih rinci terdapat di dalam folder masing-masing job sheet! `  
